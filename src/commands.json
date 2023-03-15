@@ -8,8 +8,8 @@
         "description": "Manage suggestions.",
         "options": [
             {
-                "name": "approve",
-                "description": "Approve a suggestion.",
+                "name": "accept",
+                "description": "Accept a suggestion.",
                 "type": 1,
                 "options": [
                     {
