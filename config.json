@@ -1,0 +1,8 @@
+{
+    "colors": {
+        "default": "#0066ff",
+        "accept": "#3dff00",
+        "deny": "#ff0000",
+        "implement": "#ffff00"
+    }
+}
