@@ -1,0 +1,13 @@
+{
+  "name": "suggestions-bot",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "mic0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.0.2"
+  }
+}

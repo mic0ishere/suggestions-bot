@@ -1,0 +1,51 @@
+[
+    {
+        "name": "suggest",
+        "description": "Suggest a feature to be added to the bot."
+    },
+    {
+        "name": "suggestion",
+        "description": "Manage suggestions.",
+        "options": [
+            {
+                "name": "approve",
+                "description": "Approve a suggestion.",
+                "type": 1,
+                "options": [
+                    {
+                        "name": "id",
+                        "description": "The ID of the suggestion.",
+                        "type": 3,
+                        "required": true
+                    }
+                ]
+            },
+            {
+                "name": "deny",
+                "description": "Deny a suggestion.",
+                "type": 1,
+                "options": [
+                    {
+                        "name": "id",
+                        "description": "The ID of the suggestion.",
+                        "type": 3,
+                        "required": true
+                    }
+                ]
+            },
+            {
+                "name": "implement",
+                "description": "Implement a suggestion.",
+                "type": 1,
+                "options": [
+                    {
+                        "name": "id",
+                        "description": "The ID of the suggestion.",
+                        "type": 3,
+                        "required": true
+                    }
+                ]
+            }
+        ]
+    }
+]
