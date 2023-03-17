@@ -8,5 +8,5 @@ module.exports = async () => {
     previousId = lastSuggestion ? lastSuggestion.suggestionId : 0;
   }
 
-  return ++previousId;
+  return previousId++;
 };
