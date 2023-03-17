@@ -26,7 +26,7 @@ client.on("interactionCreate", (interaction) => {
   if (interaction.isCommand()) {
     if (interactionId === "suggest") {
       suggestionCreate(client, interaction);
-    } else if (interactionId === "suggestion-manager") {
+    } else if (interactionId === "suggestion") {
       suggestionManager(client, interaction);
     }
   } else if (

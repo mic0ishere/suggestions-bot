@@ -31,7 +31,7 @@ module.exports = async (client, interaction) => {
     .setColor(client.config.colors.default)
     .setFooter({
       iconURL: interaction.user.avatarURL(),
-      text: `Votes: 0✅ 0❌  • Suggestion #${suggestionId} `,
+      text: `Votes: 0✅ 0❌  • Suggestion ID #${suggestionId} `,
     });
 
   const buttons = new ActionRowBuilder().addComponents(

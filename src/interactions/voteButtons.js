@@ -15,12 +15,12 @@ module.exports = async (client, interaction) => {
   });
 
   if (!suggestion) {
-    return await interaction.followUp({
+    return interaction.followUp({
       content: "❌ Couldn't find this suggestion",
       ephemeral: true,
     });
   } else if (suggestion.status !== "pending") {
-    return await interaction.followUp({
+    return interaction.followUp({
       content: "❌ You can no longer vote on this suggestion",
       ephemeral: true,
     });
@@ -43,8 +43,9 @@ module.exports = async (client, interaction) => {
         ...suggestionMessage.embeds[0].data,
         footer: {
           ...suggestionMessage.embeds[0].data.footer,
-          text: `Votes: ${upvotes.length}✅ ${downvotes.length}❌  • Suggestion #${suggestion.suggestionId} `,
+          text: `Votes: ${upvotes.length}✅ ${downvotes.length}❌  • Suggestion ID #${suggestion.suggestionId} `,
         },
+        timestamp: new Date().toISOString(),
       },
     ],
   });

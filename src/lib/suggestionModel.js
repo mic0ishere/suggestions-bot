@@ -18,7 +18,7 @@ const suggestionSchema = new mongoose.Schema({
   status: {
     type: String,
     default: "pending",
-    enum: ["pending", "approved", "denied", "implemented"],
+    enum: ["pending", "accepted", "denied", "implemented"],
   },
 });
 
