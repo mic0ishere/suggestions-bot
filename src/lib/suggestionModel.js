@@ -7,6 +7,14 @@ const suggestionSchema = new mongoose.Schema({
   suggestionId: Number,
   authorId: String,
   content: String,
+  upvotes: {
+    type: [String],
+    default: [],
+  },
+  downvotes: {
+    type: [String],
+    default: [],
+  },
   status: {
     type: String,
     default: "pending",

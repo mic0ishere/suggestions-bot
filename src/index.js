@@ -6,12 +6,14 @@ const deployCommands = require("./deployCommands");
 const suggestionCreate = require("./interactions/suggestionCreate");
 const suggestionManager = require("./interactions/suggestionManager");
 const modalSubmit = require("./interactions/modalSubmit");
+const voteButtons = require("./interactions/voteButtons");
 
 dotenv.config();
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
+client.config = require("../config.json");
 
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -32,19 +34,24 @@ client.on("interactionCreate", (interaction) => {
     interactionId === "suggestion-modal"
   ) {
     modalSubmit(client, interaction);
+  } else if (
+    interaction.isButton() &&
+    ["suggestion-upvote", "suggestion-downvote"].includes(interactionId)
+  ) {
+    voteButtons(client, interaction);
   }
 });
 
-mongoose.connect(
-  process.env.MONGO_URI,
-  {
+mongoose
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  },
-  async (err) => {
-    if (err) console.log(err);
+  })
+  .then(() => {
     console.log("Connected to MongoDB");
-  }
-);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 
 client.login(process.env.DISCORD_TOKEN);

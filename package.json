@@ -5,6 +5,10 @@
   "author": "mic0",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "dev": "nodemon .",
+    "start": "node ."
+  },
   "dependencies": {
     "discord.js": "^14.8.0",
     "dotenv": "^16.0.3",
