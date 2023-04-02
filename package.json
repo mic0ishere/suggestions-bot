@@ -1,10 +1,11 @@
 {
-  "name": "suggestions-bot",
-  "version": "1.0.0",
-  "main": "src/index.js",
-  "author": "mic0",
-  "license": "MIT",
   "private": true,
+  "name": "suggestions-bot",
+  "description": "A simple discord bot that allows users to suggest things to the server",
+  "version": "1.0.0",
+  "author": "mic0",
+  "main": "src/index.js",
+  "license": "MIT",
   "scripts": {
     "dev": "nodemon .",
     "start": "node ."
